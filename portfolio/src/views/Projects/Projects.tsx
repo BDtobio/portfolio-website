@@ -15,6 +15,20 @@ const projects = [
     link: "https://ecommerce-demo.com",
     repo: "https://github.com/tuusuario/ecommerce-react",
   },
+  {
+    title: "Ecommerce React",
+    description:
+      "Una tienda online moderna con carrito, filtros por categoría, login y panel de productos.",
+    link: "https://ecommerce-demo.com",
+    repo: "https://github.com/tuusuario/ecommerce-react",
+  },
+  {
+    title: "Ecommerce React",
+    description:
+      "Una tienda online moderna con carrito, filtros por categoría, login y panel de productos.",
+    link: "https://ecommerce-demo.com",
+    repo: "https://github.com/tuusuario/ecommerce-react",
+  },
 ];
 
 export default function Projects() {

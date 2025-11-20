@@ -30,13 +30,12 @@ const Navbar = () => {
             <Link to="/" onClick={() => setOpen(false)}>Inicio</Link>
           </li>
           <li>
-            <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
+            <Link to="/projects" onClick={() => setOpen(false)}>Proyectos</Link>
           </li>
           <li>
             <Link to="/contact" onClick={() => setOpen(false)}>Contacto</Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => setOpen(false)}>Sobre mí</Link>
           </li>
         </ul>
       </div>
