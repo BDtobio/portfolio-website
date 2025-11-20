@@ -31,15 +31,14 @@ export default function Contact() {
         formElement,           // ✔ FORMULARIO CORRECTO
         "Ym007lHYYYJIuKUTL"    // PUBLIC KEY
       )
-      .then(
-        () => {
-          setStatus("Mensaje enviado con éxito ✔");
-          setForm({ nombre: "", gmail: "", mensaje: "" });
-        },
-        () => {
-          setStatus("Hubo un error. Intentá de nuevo ❌");
-        }
-      );
+      .then(() => {
+  setStatus("Mensaje enviado con éxito ✔");
+  setForm({ nombre: "", gmail: "", mensaje: "" });
+})
+.catch(() => {
+  setStatus("Hubo un error. Intentá de nuevo ❌");
+});
+
   };
 
   return (

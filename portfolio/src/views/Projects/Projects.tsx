@@ -2,34 +2,35 @@ import styles from "./Projects.module.css";
 
 const projects = [
   {
-    title: "Portfolio Web",
+    title: "Nightfall — Página de Boliche",
     description:
-      "Mi sitio personal donde muestro proyectos, tecnologías y un poco sobre mi trabajo.",
-    link: "https://tusitio.com",
-    repo: "https://github.com/tuusuario/portfolio",
+      "Sitio web moderno para una discoteca, con diseño oscuro, secciones dinámicas y experiencia fluida.",
+    link: "https://nightfall-navy.vercel.app/",
+    repo: "https://github.com/BDtobio/NIGHTFALL", // si querés te pongo el repo real
   },
   {
-    title: "Ecommerce React",
+    title: "Italy Tasty — Restaurante Italiano",
     description:
-      "Una tienda online moderna con carrito, filtros por categoría, login y panel de productos.",
-    link: "https://ecommerce-demo.com",
-    repo: "https://github.com/tuusuario/ecommerce-react",
+      "Web completa para restaurante: reservas, menú, horarios, diseño elegante y estructura profesional.",
+    link: "https://italianfooddrest.vercel.app/",
+    repo: "https://github.com/BDtobio/ITALY-TASTY", // cambiar por repo real
   },
   {
-    title: "Ecommerce React",
+    title: "LA SUITE — Boliche Premium",
     description:
-      "Una tienda online moderna con carrito, filtros por categoría, login y panel de productos.",
-    link: "https://ecommerce-demo.com",
-    repo: "https://github.com/tuusuario/ecommerce-react",
+      "Landing page profesional para un boliche VIP con estética premium, formulario y navegación moderna.",
+    link: "https://la-suite-by-nightfall.vercel.app/",
+    repo: "https://github.com/BDtobio/LA-SUITE-by-NIGHTFALL", // cambiar por repo real
   },
   {
-    title: "Ecommerce React",
+    title: "Z33 Fits — Ecommerce de Ropa",
     description:
-      "Una tienda online moderna con carrito, filtros por categoría, login y panel de productos.",
-    link: "https://ecommerce-demo.com",
-    repo: "https://github.com/tuusuario/ecommerce-react",
+      "Tienda online con categorías, productos, diseño responsivo y estética urbana profesional.",
+    link: "https://z33-fits.vercel.app/",
+    repo: "https://github.com/BDtobio/Z33_FITS", // cambiar por repo real
   },
 ];
+
 
 export default function Projects() {
   return (

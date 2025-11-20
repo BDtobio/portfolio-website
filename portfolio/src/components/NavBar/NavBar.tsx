@@ -10,34 +10,22 @@ const Navbar = () => {
       <div className={styles.container}>
 
         {/* LOGO */}
-        <div className={styles.logo}>
-          <Link to="/">Tobias.dev</Link>
+        <Link to="/" className={styles.logo}>Tobias.dev</Link>
+
+        {/* HAMBURGER */}
+        <div className={styles.hamburger} onClick={() => setOpen(!open)}>
+          <span className={`${open ? styles.openLine1 : ""}`}></span>
+          <span className={`${open ? styles.openLine2 : ""}`}></span>
+          <span className={`${open ? styles.openLine3 : ""}`}></span>
         </div>
 
-        {/* HAMBURGER MENU */}
-        <div
-          className={styles.hamburger}
-          onClick={() => setOpen(!open)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        {/* NAV LINKS */}
+        {/* LINKS */}
         <ul className={`${styles.navLinks} ${open ? styles.open : ""}`}>
-          <li>
-            <Link to="/" onClick={() => setOpen(false)}>Inicio</Link>
-          </li>
-          <li>
-            <Link to="/projects" onClick={() => setOpen(false)}>Proyectos</Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={() => setOpen(false)}>Contacto</Link>
-          </li>
-          <li>
-          </li>
+          <li><Link to="/" onClick={() => setOpen(false)}>Inicio</Link></li>
+          <li><Link to="/projects" onClick={() => setOpen(false)}>Proyectos</Link></li>
+          <li><Link to="/contact" onClick={() => setOpen(false)}>Contacto</Link></li>
         </ul>
+
       </div>
     </nav>
   );
