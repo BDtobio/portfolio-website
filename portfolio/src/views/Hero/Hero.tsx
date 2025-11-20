@@ -43,8 +43,8 @@ export default function Hero() {
         </p>
 
         <div className={styles.buttons}>
-          <a href="#projects" className={styles.primaryButton}>Ver mis proyectos</a>
-          <a href="#contact" className={styles.secondaryButton}>Contactarme</a>
+          <a href="/projects" className={styles.primaryButton}>Ver mis proyectos</a>
+          <a href="/contact" className={styles.secondaryButton}>Contactarme</a>
         </div>
       </section>
 
