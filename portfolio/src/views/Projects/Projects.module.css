@@ -1,0 +1,101 @@
+/* SECCIÓN PRINCIPAL */
+.projectsSection {
+  padding: 6rem 1.5rem;
+  background: #0b132b;
+  color: #e2e7ff;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* TÍTULO */
+.title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: white;
+  letter-spacing: -1px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2rem;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 0, 80, 0.35);
+}
+
+/* TITULO */
+.cardTitle {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+/* DESCRIPCIÓN */
+.cardDescription {
+  color: #b8c4e9;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* BOTONES */
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.demoBtn,
+.codeBtn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.demoBtn {
+  background: #d90429;
+  color: white;
+}
+
+.demoBtn:hover {
+  background: #b00321;
+}
+
+.codeBtn {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+.codeBtn:hover {
+  background: white;
+  color: black;
+}

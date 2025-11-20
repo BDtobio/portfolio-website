@@ -1,33 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import styles from "./NavBar.module.css";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav
-  className="fixed top-0 left-0 w-full shadow-md z-50 bg-blue-100"
->
-  
-      <div className="max-w-7xl mx-auto px-6">
-        <ul className="list-none flex justify-center space-x-12 py-4 text-white text-lg font-semibold">
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+
+        {/* LOGO */}
+        <div className={styles.logo}>
+          <Link to="/">Tobias.dev</Link>
+        </div>
+
+        {/* HAMBURGER MENU */}
+        <div
+          className={styles.hamburger}
+          onClick={() => setOpen(!open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* NAV LINKS */}
+        <ul className={`${styles.navLinks} ${open ? styles.open : ""}`}>
           <li>
-            <Link to="/" className="no-underline hover:text-blue-300 transition">
-              Inicio
-            </Link>
+            <Link to="/" onClick={() => setOpen(false)}>Inicio</Link>
           </li>
           <li>
-            <Link to="/projects" className="no-underline hover:text-blue-300 transition">
-              Projects
-            </Link>
+            <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
           </li>
           <li>
-            <Link to="/contact" className="no-underline hover:text-blue-300 transition">
-              Contacto
-            </Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>Contacto</Link>
           </li>
           <li>
-            <Link to="/about" className="no-underline hover:text-blue-300 transition">
-              Sobre Nosotros
-            </Link>
+        
           </li>
         </ul>
       </div>
