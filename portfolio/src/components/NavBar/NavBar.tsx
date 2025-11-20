@@ -36,7 +36,7 @@ const NavBar = () => {
             <Link to="/contact" onClick={() => setOpen(false)}>Contacto</Link>
           </li>
           <li>
-        
+            <Link to="/about" onClick={() => setOpen(false)}>Sobre mí</Link>
           </li>
         </ul>
       </div>
