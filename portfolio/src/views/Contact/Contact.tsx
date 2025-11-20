@@ -18,20 +18,18 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Enviando...");
 
+    const formElement = e.currentTarget as HTMLFormElement; // ✔ CASTEO CORRECTO
+
     emailjs
-      .send(
-        "service_ts9zmsp", // TU SERVICE ID
-        "template_4ry196q", // TU TEMPLATE ID
-        {
-          nombre: form.nombre,   // → COINCIDE CON {{nombre}}
-          gmail: form.gmail,     // → COINCIDE CON {{gmail}}
-          mensaje: form.mensaje, // → COINCIDE CON {{mensaje}}
-        },
-        "Ym007lHYYYJIuKUTL" // 🔑 REEMPLAZAR
+      .sendForm(
+        "service_ts9zmsp",     // SERVICE ID
+        "template_4ry196q",    // TEMPLATE ID
+        formElement,           // ✔ FORMULARIO CORRECTO
+        "Ym007lHYYYJIuKUTL"    // PUBLIC KEY
       )
       .then(
         () => {
