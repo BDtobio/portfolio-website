@@ -1,18 +1,42 @@
-/* SECCIÓN PRINCIPAL */
+/* ---------------- SECCIÓN PRINCIPAL ---------------- */
 .projectsSection {
+  position: relative;
+  min-height: 100vh;
   padding: 6rem 1.5rem;
-  background: #0b132b;
+  overflow: hidden;
   color: #e2e7ff;
 }
 
-/* CONTENEDOR */
+/* ---------------- VIDEO DE FONDO ---------------- */
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.55);
+}
+
+/* OSCURECER VIDEO */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* ---------------- CONTENEDOR ---------------- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 2; /* Evita que quede debajo del video */
 }
 
-/* TÍTULO */
+/* ---------------- TÍTULO ---------------- */
 .title {
   font-size: 2.6rem;
   font-weight: 800;
@@ -21,7 +45,7 @@
   letter-spacing: -1px;
 }
 
-/* GRID */
+/* ---------------- GRID ---------------- */
 .grid {
   display: grid;
   gap: 2rem;
@@ -33,7 +57,7 @@
   }
 }
 
-/* CARD */
+/* ---------------- CARD ---------------- */
 .card {
   background: rgba(255, 255, 255, 0.04);
   padding: 2rem;
@@ -49,7 +73,7 @@
   box-shadow: 0 15px 35px rgba(255, 0, 80, 0.35);
 }
 
-/* TITULO */
+/* ---------------- INFO DE LA CARD ---------------- */
 .cardTitle {
   font-size: 1.7rem;
   font-weight: 700;
@@ -57,7 +81,6 @@
   color: #ffffff;
 }
 
-/* DESCRIPCIÓN */
 .cardDescription {
   color: #b8c4e9;
   font-size: 1rem;
@@ -65,7 +88,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* BOTONES */
+/* ---------------- BOTONES ---------------- */
 .buttons {
   display: flex;
   gap: 1rem;
@@ -98,4 +121,12 @@
 .codeBtn:hover {
   background: white;
   color: black;
+}
+/* CAPA AZUL */
+.blueOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(0, 85, 255); /* Azul profesional */
+  z-index: -1;
+  mix-blend-mode: overlay; /* Esto mezcla la capa con el video */
 }

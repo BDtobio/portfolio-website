@@ -14,9 +14,24 @@ export default function Hero() {
   return (
     <>
       {/* HERO PRINCIPAL */}
-      <section className={`${styles.heroSection} ${styles.fadeIn}`}>
+     <section className={`${styles.heroSection} ${styles.fadeIn}`}>
 
-        <p className={styles.topTag}>Desarrollador Moderno · Interfaces de Alto Nivel</p>
+  <video
+    className={styles.videoBackground}
+    src="/videos/video3.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
+  <div className={styles.blueOverlay}></div>
+
+        <h1 className={`${styles.heroName} ${styles.gradientText}`}>
+          FULL STACK DEVELOPER
+        </h1>
+
+        <h2 className={styles.role}>Tobias Alejandro Bustos Diaco</h2>
+
 
         <div className={styles.imageContainer}>
           <img
@@ -26,11 +41,6 @@ export default function Hero() {
           />
         </div>
 
-        <h1 className={`${styles.heroName} ${styles.gradientText}`}>
-          Tobias Alejandro Bustos Diaco
-        </h1>
-
-        <h2 className={styles.role}>Desarrollador Frontend · UI Developer</h2>
 
         <p className={styles.description}>
           Transformo ideas en experiencias digitales rápidas, modernas y visualmente atractivas.
@@ -45,6 +55,26 @@ export default function Hero() {
           </a>
         </div>
       </section>
+      
+{/* SOBRE MÍ */}
+<section className={styles.aboutSection}>
+  <h3 className={styles.aboutTitle}>Sobre mí</h3>
+
+  <p className={styles.aboutText}>
+    Soy un desarrollador Full Stack en crecimiento, apasionado por crear experiencias digitales claras, modernas y 
+    visualmente profesionales. Me enfoco en interfaces limpias, rendimiento y detalles que hacen la diferencia.
+  </p>
+
+  <p className={styles.aboutText}>
+    Me formé construyendo proyectos reales: páginas para boliches, restaurantes, tiendas de ropa y sitios modernos 
+    para marcas. Busco mejorar constantemente, aprender nuevas tecnologías y llevar cada proyecto a un nivel más alto.
+  </p>
+
+  <p className={styles.aboutText}>
+    Tengo facilidad para comunicarme, trabajar con clientes y entender lo que necesitan para transformar una idea en 
+    un producto funcional. Mi objetivo es seguir creciendo como desarrollador y aportar valor en cada proyecto que hago.
+  </p>
+</section>
 
       {/* TECNOLOGÍAS */}
       <section className={styles.techSection}>

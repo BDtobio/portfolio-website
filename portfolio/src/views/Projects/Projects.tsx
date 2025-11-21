@@ -31,10 +31,27 @@ const projects = [
   },
 ];
 
-
 export default function Projects() {
   return (
     <section id="projects" className={styles.projectsSection}>
+      
+      {/* VIDEO DE FONDO */}
+<video
+  className={styles.videoBackground}
+  src="/videos/video2.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+/>
+
+{/* CAPA OSCURA */}
+{/* <div className={styles.overlay}></div> */}
+
+{/* CAPA AZUL */}
+<div className={styles.blueOverlay}></div>
+
+
       <div className={styles.container}>
         <h2 className={styles.title}>Proyectos</h2>
 
@@ -45,12 +62,8 @@ export default function Projects() {
               <p className={styles.cardDescription}>{project.description}</p>
 
               <div className={styles.buttons}>
-                <a href={project.link} target="_blank" className={styles.demoBtn}>
-                  Ver Demo
-                </a>
-                <a href={project.repo} target="_blank" className={styles.codeBtn}>
-                  Código
-                </a>
+                <a href={project.link} target="_blank" className={styles.demoBtn}>Ver Demo</a>
+                <a href={project.repo} target="_blank" className={styles.codeBtn}>Código</a>
               </div>
             </div>
           ))}

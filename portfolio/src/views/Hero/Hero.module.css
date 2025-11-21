@@ -1,18 +1,49 @@
-/* SECCIÓN PRINCIPAL */
+/* ========================================================= */
+/* =====================  HERO SECTION  ===================== */
+/* ========================================================= */
+
 .heroSection {
   position: relative;
   min-height: 75vh;
   padding: 6rem 1.5rem;
   text-align: center;
   color: white;
-  background: linear-gradient(to bottom, #0c2a7a, #000);
+  background: #0a215e;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
 }
 
-/* GLOW SUAVE */
+/* ---------------- VIDEO DE FONDO HERO ---------------- */
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.55);
+}
+
+/* ---------------- CAPAS DE COLOR ---------------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 99, 202, 0.45);
+  z-index: -1;
+}
+
+.blueOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 31, 217, 0.323);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------------- GLOW SUAVE ---------------- */
 .glowWrapper {
   position: absolute;
   inset: 0;
@@ -43,77 +74,11 @@
     height: 650px;
   }
 }
-/* 🔥 SECCIÓN DE TECNOLOGÍAS */
-.techSection {
-  padding: 4rem 1.5rem;
-  background: #0b132b;
-  color: #e2e7ff;
-  text-align: center;
-}
 
-.techTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: white;
-}
+/* ========================================================= */
+/* ========================= IMAGEN ======================== */
+/* ========================================================= */
 
-/* ───────────────────────────── */
-/*      SECCIÓN DE TECNOLOGÍAS   */
-/* ───────────────────────────── */
-
-.techSection {
-  background: #0b132b;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-.techTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.5px;
-}
-
-.techGrid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.techItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.3rem 1rem;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(6px);
-}
-
-.techItem:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(255, 0, 100, 0.25);
-}
-
-.techItem img {
-  width: 45px;
-  height: 45px;
-}
-
-.techItem span {
-  font-size: 1rem;
-  color: #e2e7ff;
-  font-weight: 500;
-}
-
-
-/* IMAGEN */
 .imageContainer {
   width: 160px;
   height: 160px;
@@ -149,7 +114,10 @@
   }
 }
 
-/* NOMBRE */
+/* ========================================================= */
+/* ========================== TEXTOS ======================== */
+/* ========================================================= */
+
 .heroName {
   font-size: 2rem;
   font-weight: 800;
@@ -157,25 +125,10 @@
   letter-spacing: -1px;
 }
 
-@media (min-width: 640px) {
-  .heroName {
-    font-size: 3rem;
-  }
-}
+@media (min-width: 640px) { .heroName { font-size: 3rem; } }
+@media (min-width: 768px) { .heroName { font-size: 3.5rem; } }
+@media (min-width: 1024px) { .heroName { font-size: 4rem; } }
 
-@media (min-width: 768px) {
-  .heroName {
-    font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .heroName {
-    font-size: 4rem;
-  }
-}
-
-/* GRADIENTE ANIMADO */
 .gradientText {
   background: linear-gradient(
     90deg,
@@ -197,7 +150,6 @@
   100% { background-position: -200% center; }
 }
 
-/* ROL */
 .role {
   font-size: 1.25rem;
   font-weight: 600;
@@ -205,15 +157,9 @@
   margin-bottom: 1rem;
 }
 
-@media (min-width: 640px) {
-  .role { font-size: 1.75rem; }
-}
+@media (min-width: 640px) { .role { font-size: 1.75rem; } }
+@media (min-width: 768px) { .role { font-size: 2rem; } }
 
-@media (min-width: 768px) {
-  .role { font-size: 2rem; }
-}
-
-/* DESCRIPCIÓN */
 .description {
   max-width: 650px;
   margin: 0 auto 1.5rem;
@@ -222,46 +168,19 @@
   line-height: 1.6;
 }
 
-@media (min-width: 640px) {
-  .description { font-size: 1.125rem; }
-}
+@media (min-width: 640px) { .description { font-size: 1.125rem; } }
+@media (min-width: 768px) { .description { font-size: 1.25rem; } }
 
-@media (min-width: 768px) {
-  .description { font-size: 1.25rem; }
-}
+/* ========================================================= */
+/* ========================== BOTONES ======================= */
+/* ========================================================= */
 
-/* STACK */
-.stack {
-  color: #bfc8e6;
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 640px) {
-  .stack { font-size: 1rem; }
-}
-
-@media (min-width: 768px) {
-  .stack { font-size: 1.125rem; }
-}
-
-.bold {
-  font-weight: 600;
-}
-
-/* BOTONES */
+/* CONTENEDOR DE BOTONES */
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
- 
+  gap: 1.2rem;
 }
-
-.primaryButton,
-.secondaryButton {
-  text-decoration: none !important;
-}
-
 
 @media (min-width: 640px) {
   .buttons {
@@ -270,36 +189,69 @@
   }
 }
 
+/* ========================================================= */
+/* 🔷 BOTÓN PRINCIPAL — NEÓN AZUL PREMIUM */
+/* ========================================================= */
 .primaryButton {
-  background: #d90429;
-  padding: 1rem 2rem;
+  padding: 1rem 2.2rem;
   border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: white;
-  transition: all 0.3s;
-  box-shadow: 0 0 15px rgba(217, 4, 41, 0.4);
+  background: linear-gradient(90deg, #1a73e8, #4fa3ff);
+  box-shadow: 0 0 18px rgba(79, 163, 255, 0.7);
+  border: none;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .primaryButton:hover {
-  background: #b00321;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 28px rgba(79, 163, 255, 1);
 }
 
+/* ========================================================= */
+/* ⚪ BOTÓN SECUNDARIO — BLANCO PREMIUM */
+/* ========================================================= */
 .secondaryButton {
-  padding: 1rem 2rem;
+  padding: 1rem 2.2rem;
   border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.4);
-  transition: all 0.3s;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0a215e;
+  background: white;
+  border: none;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
 .secondaryButton:hover {
-  background: white;
-  color: black;
+  background: #e7e7e7;
+  transform: translateY(-3px) scale(1.03);
 }
-/* ------------------ ANIMACIÓN (MEJORA 2) ------------------ */
+
+/* ========================================================= */
+/* 🔥 BOTÓN CV — GRADIENTE ROJO PREMIUM */
+/* ========================================================= */
+.cvButton {
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff3a3a, #ff7b7b);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(255, 70, 70, 0.7);
+  transition: 0.3s ease;
+}
+
+.cvButton:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 26px rgba(255, 70, 70, 1);
+}
+
+/* Fade Animation */
 .fadeIn {
   opacity: 0;
   transform: translateY(20px);
@@ -313,30 +265,141 @@
   }
 }
 
-/* ------------------ BOTÓN CV (MEJORA 3) ------------------ */
-.cvButton {
-  padding: 0.9rem 1.8rem;
-  border: 1px solid #4f7cfe;
-  border-radius: 6px;
-  font-weight: 600;
-  color: #4f7cfe;
-  transition: 0.3s ease;
-  text-decoration: none;
+/* ========================================================= */
+/* ====================== TECNOLOGÍAS ======================= */
+/* ========================================================= */
+
+.techSection {
+  padding: 4rem 1.5rem;
+  background: #081b50;
+  color: #e2e7ff;
+  text-align: center;
 }
 
-.cvButton:hover {
-  background: #4f7cfe;
+.techTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
   color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(79, 124, 254, 0.35);
+  margin-bottom: 2.5rem;
 }
 
-/* ------------------ SUBTÍTULO CATEGORÍAS (MEJORA 5) ------------------ */
-.techSubtitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+.techGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.3rem 1rem;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.techItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255, 0, 100, 0.25);
+}
+
+.techItem span {
+  font-size: 1rem;
+  color: #e2e7ff;
+  font-weight: 500;
+}
+
+/* ========================================================= */
+/* ======================= SOBRE MÍ ======================== */
+/* ========================================================= */
+
+.aboutSection {
+  max-width: 900px;
+  margin: 4rem auto 5rem;
+  padding: 2.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.9s ease forwards;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(80, 120, 255, 0.25);
+}
+
+.aboutSection::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -50%;
+  width: 200%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.01) 60%
+  );
+  transform: rotate(25deg);
+  animation: glassShine 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes glassShine {
+  0% { transform: translateX(-60%) rotate(25deg); }
+  100% { transform: translateX(60%) rotate(25deg); }
+}
+
+.aboutTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #4d7cff, #9b4dff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutText {
+  font-size: 1.15rem;
+  line-height: 1.7;
   color: #e5e9ff;
+  margin-bottom: 1.3rem;
   opacity: 0.9;
+  text-align: center;
+}
+
+/* Responsive — About */
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 1.3rem;
+    margin: 2.5rem 1rem;
+  }
+
+  .aboutTitle { font-size: 1.6rem; }
+  .aboutText { font-size: 0.95rem; }
+}
+
+@media (max-width: 768px) {
+  .aboutSection { padding: 1.8rem; }
+  .aboutTitle { font-size: 1.8rem; }
+  .aboutText { font-size: 1rem; }
+}
+
+@media (min-width: 1200px) {
+  .aboutSection {
+    max-width: 950px;
+    padding: 2.5rem;
+  }
+
+  .aboutTitle { font-size: 2.2rem; }
+  .aboutText { font-size: 1.2rem; }
 }
